@@ -31,6 +31,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+<img src='http://i.imgur.com/9NKBuvT.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [convertio](https://convertio.co/mov-gif/).
+
+Also available on Youtube:
+
 https://youtu.be/9T6P_-FyQrY
 
 ## Notes
