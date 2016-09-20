@@ -29,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        populateArrayItems();
-        lvItems = (ListView) findViewById(R.id.lvItems);
-        lvItems.setAdapter(aToDoAdapter);
+
         etEditText = (EditText) findViewById(R.id.etEditText);
+        lvItems = (ListView) findViewById(R.id.lvItems);
+        populateArrayItems();
+        lvItems.setAdapter(aToDoAdapter);
 
         // Edit click
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             todoItems = new ArrayList<String>(FileUtils.readLines(file));
         } catch (IOException e){
-
+            todoItems = new ArrayList<String>();
         }
     }
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             FileUtils.writeLines(file, todoItems);
         } catch (IOException e){
-
+            e.printStackTrace();
         }
     }
 
